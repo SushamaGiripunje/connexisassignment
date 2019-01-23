@@ -1,0 +1,24 @@
+ 
+ 
+<div style="padding-left:100px;padding-right: 100px">
+<mat-grid-list cols="4" rowHeight="200px">
+  <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+      <mat-card class="example-card" >
+ 
+        <img mat-card-image [src]="tile.pathImage" [alt]="tile.author" style="size:100%; background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;">     
+       
+    </mat-card>
+      <mat-grid-tile-footer>
+      <a style="cursor: pointer"> {{tile.titleList}} </a>
+      </mat-grid-tile-footer>     
+  </mat-grid-tile>
+  
+  
+</mat-grid-list>
+</div>
